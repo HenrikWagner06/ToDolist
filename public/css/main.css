@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 1000;
+}
+
+.title{
+    text-align: center;
+}
+h1{
+    color: white;
+    font-size: 45px;
+    font-weight: 1000;
+}
+body{
+    background: rgb(0,146,255);
+    background: linear-gradient(90deg, rgba(0,146,255,1) 0%, rgba(214,0,255,1) 100%);
+}
+p{
+    color: white;
+    text-align: justify;
+    margin-top: 15px;
+    font-size: 20px;
+    margin-left: 46%;
+
+}
+.inputs{
+    top: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.task{
+    width: 500px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: grey;
+}
+.submit{
+    height: 50px;
+    width: 505px;
+    background: white;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: grey;
+}
+
+.submit:hover{
+    background: transparent;
+    transition: .5s;
+    color: white;
+}
+
+::placeholder{
+    text-align: center;
+    color: grey;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.task:focus{
+    outline: none;
+}
+
+#icon{
+    color: white;
+    font-size: 20px;
+
+}
+
+
