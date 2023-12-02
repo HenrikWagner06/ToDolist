@@ -11,7 +11,7 @@
     <h1 class="title">TODO-List</h1>
 
     <div class="container">
-        <form action="{{ route('store') }}" method="post">
+        <form action="{{ route('stores') }}" method="post">
             @csrf
             <div class="inputs">
                 <input class="task" type="text" name="task" placeholder="Add Task"> <br><br>

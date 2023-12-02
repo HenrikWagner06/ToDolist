@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\File;
 
 class TodoController extends Controller
 {
-    public function store(Request $request)
+    public function stores(Request $request)
     {
         $task = $request->input('task');
         $taskpath = storage_path('app/tasks.json');
