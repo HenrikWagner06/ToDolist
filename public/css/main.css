@@ -11,7 +11,6 @@
 h1{
     color: white;
     font-size: 45px;
-    font-weight: 1000;
 }
 body{
     background: rgb(0,146,255);
@@ -41,7 +40,7 @@ p{
 }
 .submit{
     height: 50px;
-    width: 505px;
+    width: 250.5px;
     background: white;
     border-radius: 20px;
     border: 2px solid white;
@@ -64,9 +63,10 @@ p{
     outline: none;
 }
 
-#icon{
+#icons{
     color: white;
     font-size: 20px;
+    font-weight: 100;
 
 }
 

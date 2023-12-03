@@ -8,16 +8,20 @@
 <body>
 <main>
     <br><br>
-    <h1 class="title">TODO-List</h1>
+    <h1 class="title">Welcome to my ToDo-List</h1>
 
     <div class="container">
-        <form action="{{ route('stores') }}" method="post">
+        <form action="{{ route('store') }}" method="post">
             @csrf
             <div class="inputs">
                 <input class="task" type="text" name="task" placeholder="Add Task"> <br><br>
-                <input class="submit" name="submit" type="submit" value="Submit">
+                <input class="submit" name="submit" type="submit" value="Submit"> <i id="icons" class="fa fa-trash"></i>
                 <div id="tasks" class="tasks">
-                        <p>-  <i id="icons" class="fa fa-trash"></i></p>
+                    @if(isset($my_tasks))
+                    @foreach($my_tasks as $tasks)
+                        <p>{{$tasks}} </p>
+                    @endforeach
+                    @endif
                 </div>
             </div>
         </form>

@@ -7,15 +7,23 @@ use Illuminate\Support\Facades\File;
 
 class TodoController extends Controller
 {
-    public function stores(Request $request)
+    public function store(Request $request)
     {
-        $task = $request->input('task');
-        $taskpath = storage_path('app/tasks.json');
-        $task2 = json_decode(File::get($taskpath), true);
-        $task2[] = $task;
-        File::put($taskpath, json_encode($task2));
-
+        $newTask = $request->input('task');
+        $tasksFilePath = storage_path('app/tasks.json');
+        $existingTasks = json_decode(File::get($tasksFilePath), true);
+        $updatedTasks = $existingTasks;
+        $updatedTasks[] = $newTask;
+        File::put($tasksFilePath, json_encode($updatedTasks));
         return redirect()->back();
     }
+
+    public function showTask(){
+        $my_tasks = storage_path('app/tasks.json');
+        $my_tasks = json_decode(File::get( $my_tasks), true);
+        exit();
+        return view('index')->with(['my_tasks' => $my_tasks]);
+    }
+
 }
 
