@@ -17,8 +17,13 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
-Route::get('/test', [TodoController::class, 'showTask'])->name('showTask');
-Route::post('/', [TodoController::class, 'store'])->name('store');
+Route::get('/test',
+    [TodoController::class, 'showTask'])
+    ->name('showTask');
+
+Route::post('/',
+    [TodoController::class, 'store'])
+    ->name('store');
 
 
 
