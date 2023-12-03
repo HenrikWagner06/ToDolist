@@ -9,20 +9,23 @@ class TodoController extends Controller
 {
     public function store(Request $request)
     {
+        //storeTask//
         $newTask = $request->input('task');
         $tasksFilePath = storage_path('app/tasks.json');
         $existingTasks = json_decode(File::get($tasksFilePath), true);
         $updatedTasks = $existingTasks;
         $updatedTasks[] = $newTask;
         File::put($tasksFilePath, json_encode($updatedTasks));
-        return redirect()->back();
-    }
+        //storeTask//
 
-    public function showTask(){
+        //showTask//
         $my_tasks = storage_path('app/tasks.json');
         $my_tasks = json_decode(File::get( $my_tasks), true);
+        echo"$my_tasks";
         exit();
-        return view('index')->with(['my_tasks' => $my_tasks]);
+        return name('home')->with(['my_tasks' => $my_tasks]);
+
+        //showTask//
     }
 
 }
