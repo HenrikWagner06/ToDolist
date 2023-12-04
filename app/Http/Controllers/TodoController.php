@@ -21,9 +21,7 @@ class TodoController extends Controller
         //showTask//
         $my_tasks = storage_path('app/tasks.json');
         $my_tasks = json_decode(File::get( $my_tasks), true);
-        echo"$my_tasks";
-        exit();
-        return name('home')->with(['my_tasks' => $my_tasks]);
+        return view('index')->with(['my_tasks' => $my_tasks]);
 
         //showTask//
     }
