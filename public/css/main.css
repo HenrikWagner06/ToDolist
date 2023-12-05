@@ -18,10 +18,9 @@ body{
 }
 p{
     color: white;
-    text-align: justify;
+    text-align: center;
     margin-top: 8px;
     font-size: 20px;
-    margin-left: 46%;
 
 }
 .inputs{
@@ -40,7 +39,7 @@ p{
 }
 .submit{
     height: 50px;
-    width: 250.5px;
+    width: 505px;
     background: white;
     border-radius: 20px;
     border: 2px solid white;
@@ -69,5 +68,8 @@ p{
     font-weight: 100;
 
 }
-
+.check{
+    background-color: transparent;
+    border: 1px solid #000;
+}
 

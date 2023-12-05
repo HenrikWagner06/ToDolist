@@ -15,11 +15,11 @@
             @csrf
             <div class="inputs">
                 <input class="task" type="text" name="task" placeholder="Add Task"> <br><br>
-                <input class="submit" name="submit" type="submit" value="Submit"> <i id="icons" class="fa fa-trash"></i>
+                <input class="submit" name="submit" type="submit" value="Submit">
                 <div id="tasks" class="tasks">
                     @if(isset($my_tasks))
                     @foreach($my_tasks as $tasks)
-                        <p>{{$tasks}} </p>
+                        <p><input class="check" type="checkbox" name="checked"> {{$tasks}}   <i id="icons" class="fa fa-trash"></i></p>
                     @endforeach
                     @endif
                 </div>
